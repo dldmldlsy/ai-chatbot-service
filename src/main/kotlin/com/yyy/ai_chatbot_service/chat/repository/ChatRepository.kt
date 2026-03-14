@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository
 @Repository
 interface ChatRepository : JpaRepository<Chat, Long> {
     fun findByThreadOrderByCreatedAtAsc(thread: ChatThread): List<Chat>
+    fun findByThreadIdInOrderByCreatedAtAsc(threadIds: List<Long>): List<Chat>
 }
