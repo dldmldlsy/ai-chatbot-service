@@ -1,3 +1,13 @@
 spring:
-  application:
-    name: ai-chatbot-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/assignment_db
+    username: postgres
+    password: your_password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  server:
+    port: 8080
