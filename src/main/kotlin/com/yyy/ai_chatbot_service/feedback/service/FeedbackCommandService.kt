@@ -63,10 +63,7 @@ class FeedbackCommandService(
             throw IllegalArgumentException("Invalid status")
         }
 
-        when (status) {
-            FeedbackStatus.PENDING -> feedback.status = FeedbackStatus.PENDING
-            FeedbackStatus.RESOLVED -> feedback.resolve()
-        }
+        feedback.changeStatus(status)
 
         val saved = feedbackRepository.save(feedback)
         return saved.toResponse()

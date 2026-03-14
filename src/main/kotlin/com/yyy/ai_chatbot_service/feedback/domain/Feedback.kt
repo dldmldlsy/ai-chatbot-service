@@ -75,6 +75,10 @@ open class Feedback protected constructor() {
         this.status = FeedbackStatus.RESOLVED
     }
 
+    fun changeStatus(status: FeedbackStatus) {
+        this.status = status
+    }
+
     companion object {
         fun create(
             user: User,
