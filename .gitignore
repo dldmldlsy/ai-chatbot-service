@@ -38,3 +38,19 @@ out/
 
 ### Kotlin ###
 .kotlin
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Env / secrets
+.env
+.env.*
+application-local.yml
+application-local.yaml
+application-secret.yml
+application-secret.yaml
+src/main/resources/application-local.yml
+src/main/resources/application-local.yaml
